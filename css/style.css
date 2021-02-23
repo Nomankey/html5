@@ -1,72 +1,54 @@
 body{
     margin: 0;
-}
-body *, body *::before, body *::after{
+  }
+  body *, body *::before, body *::after{
     box-sizing: border-box;
-}
-
-
-.header, .visual, .main, .slogan, .footer-content{
+  }
+  .header, .visual, .main, .slogan, .footer-content{
     width: 940px;
     margin: 0 auto;
-    height: 10vh
-
-}
-
-.header{
-    width: 940px;
+  }
+  .header{
     background-color: yellow;
-}
-
-.visual{
+    height: 10vh;
+  }
+  .visual{
     background-color: salmon;
-}
-
-.main{
+    height: 10vh;
+  }
+  .main{
     background-color: blue;
-    /*height: 60vh*/
-    padding: 30px 15px;
-}
-
-.main::after{
-    content: " ";
-    display: block;
-    clear: both;
-}
-
-.group{
+    display: flex;
+    flex-direction: row; /*default 방향은 row*/
+    justify-content: space-evenly;
+    padding: 30px;
+  }
+  
+  .group{
     height: 60vh;
-    margin: 0 15px;
-}
-
-.group1{
+  }
+  .group1{
     background-color: violet;
-    float: left;
     width: 250px;
-}
-
-.group2{
+  }
+  .group2{
     background-color: aqua;
     width: 380px;
-    float: left;
-}
-
-.group3{
+    order: -1; /*default 값은 0이다.*/
+  }
+  .group3{
     background-color: sandybrown;
     width: 190px;
-    float: left;
-}
-
-.slogan{
+  }
+  .slogan{
     background-color: lightgreen;
-    clear: both;
-
-}
-
-.footer{
+    height: 10vh;
+  }
+  
+  .footer{
     background-color: silver;
-}
-
-.footer-content{
+  }
+  .footer-content{
     background-color: pink;
-}
+    height: 10vh;
+  }
