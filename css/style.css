@@ -1,75 +1,108 @@
+html{
+  font-size: 10px;
+}
+
+
 body{
-    margin: 0;
-    background-color: #ccc;
-  }
+  margin: 0;
+  background-color: #ccc;
+  font-size: 1.2rem;
+}
 body *, body *::before, body *::after{
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+/*링크 스타일*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .header, .visual, .main, .slogan, .footer-content{
-    width: 940px;
-    margin: 0 auto;
-  }
-/*헤더*/
 
+  width: 940px;
+  margin: 0 auto;
+}
+/* 헤더 */
 .header{
-    background-color: #fff;
-    
-  } /*로고*/
-
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px;
+}
+/* 로고 */
 .logo{
-    margin: 0;
-    position: relative; /*로고가 하늘에 떠있는 객체가 되어버렸자너*/
-    top: 45px;
-    left: 65px;
-    font-size: 100%;
-    line-height: 1;
-  }
-  
-.logo a, .logo img{
-    display: block;
-  }
+  margin: 0;
+  position: absolute;
+  top: 45px;
+  left: 65px;
+  font-size: 100%;
+  line-height: 1;
+}
 
+/* 안내링크 */
 .member{
   margin: 0;
-  }
+  list-style: none;
+  padding-left: 0;
+  text-align: right;
+  font-size: 0;
+  padding: 5px 0;
+  position: relative;
+  right: -10px;
+}
+
+.member li{
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.member a{
+  display: inline-block;
+
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.divider{
+  margin: 0 3px;
+}
 
 .visual{
-    background-color: salmon;
-    height: 10vh;
-  }
+  background-color: salmon;
+  height: 10vh;
+}
 .main{
-    background-color: blue;
-    display: flex;
-    flex-direction: row; /*default 방향은 row*/
-    justify-content: space-evenly;
-    padding: 30px;
-  }
-  
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+}
+
 .group{
-    height: 60vh;
-  }
+  height: 60vh;
+}
 .group1{
-    background-color: violet;
-    width: 250px;
-  }
+  background-color: violet;
+  width: 250px;
+}
 .group2{
-    background-color: aqua;
-    width: 380px;
-    order: 0; /*default 값은 0이다.*/
-  }
+  background-color: aqua;
+  width: 380px;
+}
 .group3{
-    background-color: sandybrown;
-    width: 190px;
-  }
+  background-color: sandybrown;
+  width: 190px;
+}
 .slogan{
-    background-color: lightgreen;
-    height: 10vh;
-  }
-  
+  background-color: lightgreen;
+  height: 10vh;
+}
+
 .footer{
-    background-color: silver;
-  }
+  background-color: silver;
+}
 .footer-content{
-    background-color: pink;
-    height: 10vh;
-  }
+  background-color: pink;
+  height: 10vh;
+}
