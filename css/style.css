@@ -1,22 +1,43 @@
 body{
     margin: 0;
+    background-color: #ccc;
   }
-  body *, body *::before, body *::after{
+body *, body *::before, body *::after{
     box-sizing: border-box;
   }
-  .header, .visual, .main, .slogan, .footer-content{
+.header, .visual, .main, .slogan, .footer-content{
     width: 940px;
     margin: 0 auto;
   }
-  .header{
-    background-color: yellow;
-    height: 10vh;
+/*헤더*/
+
+.header{
+    background-color: #fff;
+    
+  } /*로고*/
+
+.logo{
+    margin: 0;
+    position: relative; /*로고가 하늘에 떠있는 객체가 되어버렸자너*/
+    top: 45px;
+    left: 65px;
+    font-size: 100%;
+    line-height: 1;
   }
-  .visual{
+  
+.logo a, .logo img{
+    display: block;
+  }
+
+.member{
+  margin: 0;
+  }
+
+.visual{
     background-color: salmon;
     height: 10vh;
   }
-  .main{
+.main{
     background-color: blue;
     display: flex;
     flex-direction: row; /*default 방향은 row*/
@@ -24,31 +45,31 @@ body{
     padding: 30px;
   }
   
-  .group{
+.group{
     height: 60vh;
   }
-  .group1{
+.group1{
     background-color: violet;
     width: 250px;
   }
-  .group2{
+.group2{
     background-color: aqua;
     width: 380px;
-    order: -1; /*default 값은 0이다.*/
+    order: 0; /*default 값은 0이다.*/
   }
-  .group3{
+.group3{
     background-color: sandybrown;
     width: 190px;
   }
-  .slogan{
+.slogan{
     background-color: lightgreen;
     height: 10vh;
   }
   
-  .footer{
+.footer{
     background-color: silver;
   }
-  .footer-content{
+.footer-content{
     background-color: pink;
     height: 10vh;
   }
