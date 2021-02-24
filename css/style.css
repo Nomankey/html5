@@ -89,11 +89,9 @@ a{
   height: 47px;
   padding-left: 225px;
 }
-
 .menu a{
   outline: 0;
 }
-
 .menu-item{
   position: relative;
   float: left;
@@ -110,7 +108,6 @@ a{
 }
 .menu-act .menu-item-button{
   color: #ff0;
-  /* border-bottom: 2px solid #000; */
 }
 .menu-act .menu-item-button::after{
   content: "";
@@ -122,45 +119,27 @@ a{
 .sub-menu{
   position: absolute;
   display: none;
-  top:47px;
-  white-space: nowrap; /*공백을 처리한다*/
+  top: 47px;
+  white-space: nowrap;
 }
-.sub-menu1{
-  left: 0;
+.menu-act .sub-menu{
   display: block;
 }
-
-.sub-menu2{
-  left: 0;
-}
-
-.sub-menu3{
-  left: 0;
-}
-
-.sub-menu4{
-  right: 0;
-}
-
-.sub-menu li{
-  display: inline-block;
-}
-
-.sub-menu a{
-  display: inline-block;
-  padding: 10px 0;
-  margin-right: 5px;
-}
-
 .sub-menu1, .sub-menu2, .sub-menu3{
   left: 0;
 }
-
 .sub-menu4, .sub-menu5, .sub-menu6{
   right: 0;
 }
-
-/*.sub-menu a::before{
+.sub-menu li{
+  display: inline-block;
+}
+.sub-menu a{
+  display: inline-block;
+  padding: 10px 0 8px;
+  margin-right: 5px;
+}
+/* .sub-menu a::before{
   content: '\f192';
   font-family: 'fontello';
   display: inline-block;
@@ -169,18 +148,66 @@ a{
   margin-right: .2em;
   text-align: center;
 }
-
 .sub-menu a:hover::before, .sub-menu a:focus::before{
   content: '\e800';
-}*/
-
-.sub-menu3 a:hover, .sub-menu a:focus{
+} */
+.sub-menu a:hover, .sub-menu a:focus{
   color: #f00;
 }
-
+/* 비주얼 애니메이션 */
+@keyframes textAni{
+  0%{
+    font-size: 12px;
+    color: rgba(0,0,0,0);
+    transform: translate(0, 0);
+  }
+  100%{
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+    transform: translate(400px, 75px);
+  }
+}
+@keyframes bgAni{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 .visual{
-  background-color: salmon;
-  height: 10vh;
+  height: 120px;
+  position: relative;
+}
+.visual::before, .visual::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  animation-name: bgAni;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.visual::before{
+  background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+  background-position: 0 -10px, 670px 0; 
+}
+.visual::after{
+  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+  background-position: 300px 0, 800px 0;
+  animation-delay: 1000ms; 
+}
+.visual-text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: absolute;
+  z-index: 10;
+  animation-name: textAni;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
 }
 .main{
   background-color: blue;
