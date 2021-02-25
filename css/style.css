@@ -24,12 +24,11 @@ html{
   font-size: 10px;
 }
 body{
-  /*background-color: #ccc;*/
   font-size: 1.2rem;
   font-weight: 300;
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   background: url(./images/bg_flower.png) no-repeat 50% 0,
-  linear-gradient(180deg,#ccc 0%, #eee 30%, #fff 50%, #fff 100%) repeat 0 0;
+  linear-gradient(180deg, #ccc 0%, #eee 30%, #fff 50%, #fff 100%) repeat 0 0;
   background-color: #ccc;
 }
 body *, body *::before, body *::after{
@@ -82,15 +81,6 @@ a{
 }
 .divider{
   margin: 0 3px;
-}
-
-.member li{
-  background-color: yellow;
-}
-
-.member li:nth-child(n+2)::before{
-  content:"|";
-  
 }
 
 /* 메인 메뉴 */
@@ -222,7 +212,7 @@ a{
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
 }
-/*메인 콘텐츠*/
+/* 메인 콘텐츠 */
 .main{
   background-color: #fff;
   border-radius: 15px 15px 0 0;
@@ -233,32 +223,35 @@ a{
   min-height: 400px;
 }
 
-
 .group1{
-  
   width: 250px;
 }
 .group2{
-  
   width: 380px;
 }
 .group3{
-  
   width: 190px;
 }
-
-.login {
-  background: radial-gradient(circle at right top, #eaac2e, #ce4827);
+/* 로그인 */
+.login{
+  background: radial-gradient(circle at right top, #eaac2e , #ce4827);
   border-radius: 5px;
   box-shadow: 5px 5px 0 0 #aaa;
   padding: 10px;
 }
+.login-heading{
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ff0;
+  text-indent: 10px;
+}
 .login-form{
   background: #fff;
   border-radius: 5px 5px 0 0;
-  padding: 10px 10px 0 10px
+  padding: 10px 10px 0 10px;
+  margin-top: 10px;
 }
-
 .login-form fieldset{
   margin: 0;
   padding: 0 0 10px 0;
@@ -266,60 +259,63 @@ a{
   border-bottom: 1px solid #aaa;
   position: relative;
 }
-
 .user-pw{
   margin-top: 6px;
 }
-
 .login-form label{
   display: inline-block;
   width: 50px;
 }
-
 .login-form input{
   width: 90px;
   height: 22px;
   padding: 1px 1px 1px 5px;
-  border: 1px solid #aaa
+  border: 1px solid #aaa;
 }
 .btn-login{
   position: absolute;
   top: 0;
   right: 0;
   background-color: #ce4827;
+  padding: 0;
+  border: 0;
   color: #fff;
   width: 50px;
   height: 50px;
-  padding: 0;
-  border: 0;
   border-radius: 5px;
 }
-
 .member-service{
   background: #fff;
   padding: 5px 10px;
   margin: 0;
+  list-style-type: none;
   border-radius: 0 0 5px 5px;
-  list-style: none;
   display: flex;
   justify-content: space-between;
 }
-
-.member-service .icon-right-open{
-  color: orange;
-}
-
 .member-service a{
   display: inline-block;
   padding: 5px 0;
 }
-
-.login-heading{
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: yellow;
-  text-indent: 10px;
+.member-service .icon-right-open{
+  color: #ce4827;
+}
+/* 유효성 검사 배너 */
+.validation-list{
+  background:yellow;
+  margin: 25px 0 0 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.validation-list a{
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 7px 5px 5px 40px;
+  background: url(./images/validation_icon.png) no-repeat 15px 50%,
+  linear-gradient(180deg, #ccc, #eee);
+  background-color: #ccc;
 }
 
 .slogan{
