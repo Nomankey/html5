@@ -317,81 +317,66 @@ a{
   background-color: #ccc;
 }
 /* 웹 관련 용어 */
-.term {
+.term{
   margin-top: 20px;
-  padding: 16px;
+  background: #ccc linear-gradient(180deg, #ccc , #eee);
+  border: 1px solid #aaa;
   border-radius: 5px;
-  background: linear-gradient(180deg, #ccc, #eee);
-  border: 1px solid grey;
+  padding: 15px;
 }
-
-.term h2 {
+.term-heading{
   margin: 0;
-  margin-bottom: 19px;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
-
-.term dd,
-dt,
-dl {
-  margin: 0;
+.term-list{
+  margin: 10px 0 0 0;
 }
-
-.term::after {
-  content: "";
+.term-list-thumbnail, .term-list-brief{
+  margin-left: 0;
+}
+.term-list-subject, .term-list-brief{
+  width: 145px;
+}
+.term-list-subject{
+  color: #296897;
+  margin-top: -1px;
+}
+.term-list-brief{
+  margin-top: 5px;
+  line-height: 1.5;
+  /* text-align: justify; */
+}
+.term-list > div::after{
+  content: '';
   display: block;
   clear: both;
+} 
+.term-list > div{
+  /* overflow: hidden; */
+  margin-top: 10px;
 }
-
-.term-list div:nth-child(odd) dt {
+.term-list img{
+  vertical-align: top;
+}
+.term-list div:nth-child(odd) .term-list-subject, 
+.term-list div:nth-child(odd) .term-list-brief{
   float: right;
-  width: 70%;
-  font-size: 14px;
-  color: rgb(12, 110, 172);
-  font-weight: 400;
-  margin: 0 0px 10px 0;
-  padding-left: 5px;
 }
 
-.term-list div:nth-child(odd) dd:nth-of-type(1) {
+.term-list div:nth-child(odd) .term-list-thumbnail{
   float: left;
-  width: 30%;
-  height: 100%;
 }
-
-.term-list div:nth-child(odd) dd:nth-of-type(2) {
+.term-list div:nth-child(even) .term-list-subject, 
+.term-list div:nth-child(even) .term-list-brief{
+  float: left;
+}
+.term-list div:nth-child(even) .term-list-thumbnail{
   float: right;
-  width: 70%;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19px;
-  padding-left: 5px;
 }
 
-
-.term-list div:nth-child(even) dt {
-  float: left;
-  width: 70%;
-  font-size: 14px;
-  color: rgb(12, 110, 172);
-  font-weight: 400;
-  margin: 0 0px 10px 0;
-  padding: 20px 0 0 5px;
-}
-
-.term-list div:nth-child(even) dd:nth-of-type(1) {
-  float: right;
-  width: 30%;
-  height: 100%;
-  padding: 20px 0 0 0;
-}
-
-.term-list div:nth-child(even) dd:nth-of-type(2) {
-  float: left;
-  width: 70%;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19px;
-  padding-right: 5px;
+.search section {
+  background-color: tomato;
 }
 
 
