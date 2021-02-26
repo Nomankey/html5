@@ -414,6 +414,13 @@ a{
   height: 22px;
   font-size: 1.1rem;
 }
+
+
+
+
+.group3 {
+  background: tomato;
+}
 /*슬로건*/
 .slogan{
   background-color: lightgreen;
