@@ -717,5 +717,33 @@ a{
 }
 .footer-content{
   background-color: pink;
-  height: 10vh;
+  display: grid;
+  grid-template-columns: 140px 1fr 100px;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-areas: "logo guide badge" "logo address badge" "logo copyright badge";
+}
+
+.address{
+  background-color: lime;
+  grid-area: address;
+}
+
+.footer-logo{
+  grid-area: logo;
+  background-color: salmon;
+}
+
+.guide{
+  grid-area: guide;
+}
+
+
+.badge{
+  grid-area: badge;
+  background-color: teal;
+}
+
+.copyright{
+  grid-area: copyright;
+  background: skyblue;
 }
